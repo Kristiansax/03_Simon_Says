@@ -1,5 +1,4 @@
-﻿using System;
-namespace _03_Simon_Says
+﻿namespace _03_Simon_Says
 {
     public class Simon
     {
