@@ -1,4 +1,5 @@
-﻿namespace _03_Simon_Says
+﻿using System;
+namespace _03_Simon_Says
 {
     public class Simon
     {
@@ -45,6 +46,22 @@
                 z = z + x[y++];
             }
             return z;
+        }
+        public string Titleize(string x)
+        {
+            string b = "aot";
+            char[] a = b.ToCharArray();
+            char[] r = x.ToCharArray();
+            int[] z = new int [r.Length];
+            r[0] = char.ToUpper(r[0]);
+
+            for (int i = 1; i < r.Length; i++)
+            {
+                if (char.IsWhiteSpace(r[i - 1]))
+                    if (!r[i].Equals(a[0]) && !r[i].Equals(a[1]) && !r[i].Equals(a[2]))
+                        r[i] = char.ToUpper(r[i]);
+            }
+            return new string(r);
         }
     }
 }
